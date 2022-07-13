@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `postdata`.`inventario` (
   CONSTRAINT `fk_inventario_libros`
     FOREIGN KEY (`libros_idlibros`)
     REFERENCES `postdata`.`libros` (`idlibros`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `postdata`.`usuarios` (
   CONSTRAINT `fk_usuarios_roles1`
     FOREIGN KEY (`roles_idroles`)
     REFERENCES `postdata`.`roles` (`idroles`)
-    ON DELETE NO ACTION
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
